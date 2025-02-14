@@ -66,3 +66,84 @@ External transportation from the factory is done in two main ways:
 
 
 Internally, after production, products are transported from the production line to the central warehouse using forklifts. Dairy products must be stored in internal warehouses equipped with refrigeration facilities.
+
+
+
+
+
+
+
+
+
+
+
+
+# Food Product Factory Management System
+
+## Project Description
+This project models the workflow of a food product factory with various production lines and storage systems. The factory produces and manages five types of products:
+
+1. Canned and Ready Meals (various canned goods, tomato paste, sauces)
+2. Household Hygiene Products (surface cleaners, dishwashing detergents, laundry detergents)
+3. Dairy Products (milk, cream, yogurt, buttermilk)
+4. Snacks (chips, puffs, cakes, biscuits)
+5. Protein Products (meat, chicken, fish, etc.)
+
+The factory has a central warehouse consisting of five storage halls. The warehouse handles both perishable and non-perishable products with specific storage and transportation requirements. The products are transported by forklifts to the warehouse and externally via refrigerated or non-refrigerated trucks based on their category.
+
+### Key Features of the System:
+- Sales Team: 
+  - Estimates product demand and registers orders.
+  - Can track the production status of their orders.
+  
+- Technical Supervisor:
+  - Oversees production, manages order statuses, and transfers goods to logistics.
+  
+- Logistics Supervisor:
+  - Confirms the transfer of goods to the warehouse based on receipts from the production line.
+  
+- Warehouse Supervisor:
+  - Receives the goods and records them in the warehouse management system.
+  
+- Product Details: 
+  - Each product has attributes such as name, technical number, price, storage conditions, and address.
+  - Products are packaged in sets of 24.
+  
+- Transportation:
+  - Dairy products are transported using 5-ton refrigerated trucks.
+  - Other products are transported using 10-ton non-refrigerated trucks.
+  - Internal transportation between production lines and the warehouse is done using forklifts.
+
+## Workflow and Interaction:
+1. Sales Team: Registers product orders and tracks the production status (Queue, In Progress, Completed).
+2. Technical Supervisor: 
+   - Starts production based on the sales orders.
+   - Transfers the produced goods to logistics every day at 2 PM using transfer receipts.
+3. Logistics Supervisor: 
+   - Confirms the transfer receipt and ensures the goods match the details.
+   - Transports the goods to the warehouse.
+4. Warehouse Supervisor: 
+   - Receives the goods and records them in the warehouse management system.
+
+## Data Model
+Each product includes the following attributes:
+- Name: Name of the product.
+- Technical Number: Unique product ID.
+- Price: Cost of the product.
+- Storage Conditions: Conditions like temperature range or humidity.
+- Address: Unique storage location for the product.
+  
+### Example Product:
+- Name: Milk
+- Technical Number: 001
+- Price: $1.50
+- Storage Conditions: Refrigerated (2-4°C)
+- Address: Warehouse A, Section 1
+
+## System Requirements
+- Programming Language: Java
+- Libraries/Technologies: 
+  - Java Collections (List, Map, etc.)
+  - Java I/O for file handling (for storing production and inventory records)
+  - Java Date and Time API for shift management and timestamps
+  - Basic GUI or Command-Line Interface for user interaction
